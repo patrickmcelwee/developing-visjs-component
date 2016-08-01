@@ -6,6 +6,7 @@
     'ml.search',
     'ml.search.tpls',
     'ml.utils',
+    'ml.visjsGraph',
     'ngJsonExplorer',
     'app.create',
     'app.detail',
