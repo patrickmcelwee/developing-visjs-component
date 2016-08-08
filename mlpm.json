@@ -4,5 +4,6 @@
   "description": "Sample app generated with slush-marklogic-node",
   "private": true,
   "dependencies": {
+    "visjs-graph": "0.0.*"
   }
 }

@@ -6,7 +6,6 @@
     'ml.search',
     'ml.search.tpls',
     'ml.utils',
-    'ml.visjsGraph',
     'ngJsonExplorer',
     'app.create',
     'app.detail',
@@ -18,7 +17,8 @@
     'ui.bootstrap',
     'ui.router',
     'ui.tinymce',
-    'ngToast'
+    'ngToast',
+    'ml.visjsGraph'
   ]);
 
 }());

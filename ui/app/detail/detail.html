@@ -24,6 +24,14 @@
     </uib-tabset>
   </div>
   <div class="col-sm-4">
+    <div class="panel panel-default">
+      <div class="panel-heading">Graph</div>
+      <div class="panel-body" style="min-height: 50px;">
+        Explore triples for <a ui-sref="root.visjs-graph({id: ctrl.uri})">{{ctrl.uri}}</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
     <div id="buttons-detail">
       <button class="btn btn-default" ui-sref="root.search">Search</button>
       <button class="btn btn-primary" ui-sref="root.edit({uri: ctrl.uri})">Edit</button>

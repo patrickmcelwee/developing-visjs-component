@@ -12,3 +12,4 @@ local.ecosystem.json
 *.sublime-project
 *.sublime-workspace
 .tmp/
+mlpm_modules
