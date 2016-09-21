@@ -1,6 +1,9 @@
 <div class="row detail">
   <div class="col-sm-8">
     <!-- note -->
+    <div>
+      <ml-visjs-graph uris="[ctrl.uri]"></ml-visjs-graph>
+    </div>
     <uib-tabset type="pills" active="ctrl.type">
       <uib-tab index="'json'" ng-click="ctrl.type='json'" ng-if="ctrl.type==='json'">
         <uib-tab-heading>JSON</uib-tab-heading>
@@ -22,14 +25,6 @@
         </div>
       </uib-tab>
     </uib-tabset>
-  </div>
-  <div class="col-sm-4">
-    <div class="panel panel-default">
-      <div class="panel-heading">Graph</div>
-      <div class="panel-body" style="min-height: 50px;">
-        Explore triples for <a ui-sref="root.visjs-graph({id: ctrl.uri})">{{ctrl.uri}}</a>
-      </div>
-    </div>
   </div>
   <div class="col-sm-4">
     <div id="buttons-detail">
