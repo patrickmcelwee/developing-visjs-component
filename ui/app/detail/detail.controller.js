@@ -4,9 +4,52 @@
   angular.module('app.detail')
   .controller('DetailCtrl', DetailCtrl);
 
-  DetailCtrl.$inject = ['doc', '$stateParams','MLRest', 'ngToast','$state'];
-  function DetailCtrl(doc, $stateParams, MLRest, toast, $state) {
+  DetailCtrl.$inject = ['doc', '$stateParams','MLRest', 'ngToast','$state', '$q'];
+  function DetailCtrl(doc, $stateParams, MLRest, toast, $state, $q) {
     var ctrl = this;
+
+    ctrl.myOptions = {
+      edges: {
+        color: 'red'
+      }, nodes: {
+        color: {
+          background: 'orange'
+        }
+      }
+    };
+
+    ctrl.myEvents = {
+      hold: function(params) {
+        console.log('you are holding something: ', params);
+      }
+    };
+
+    function cannedSearch(uris) {
+      return $q.when({
+        nodes: [
+          {
+            id: '1',
+            label: 'The Number 1!',
+            group: 'number', // optional
+            linkCount: 8 // we look for this to add an small orb to the icon
+          },
+          {
+            id: '2',
+            label: 'The Only Even Prime!',
+            group: 'number', // optional
+            linkCount: 16 // we look for this to add an small orb to the icon
+          }
+        ],
+        links: [
+          {
+            id: 'more-2-1',
+            label: 'moreThan',
+            from: '2',
+            to: '1'
+          }
+        ]
+      });
+    }
 
     var uri = $stateParams.uri;
 
@@ -43,6 +86,7 @@
     angular.extend(ctrl, {
       doc : doc.data,
       uri : uri,
+      cannedSearch: cannedSearch,
       delete: deleteFunc
     });
 

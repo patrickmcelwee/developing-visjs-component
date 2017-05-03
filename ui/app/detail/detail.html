@@ -2,7 +2,7 @@
   <div class="col-sm-8">
     <!-- note -->
     <div>
-      <ml-visjs-graph uris="[ctrl.uri]"></ml-visjs-graph>
+      <ml-visjs-graph uris="[ctrl.uri]" graph-options="ctrl.myOptions" graph-events="ctrl.myEvents"></ml-visjs-graph>
     </div>
     <uib-tabset type="pills" active="ctrl.type">
       <uib-tab index="'json'" ng-click="ctrl.type='json'" ng-if="ctrl.type==='json'">
